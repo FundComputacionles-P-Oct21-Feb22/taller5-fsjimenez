@@ -1,0 +1,69 @@
+Problema 2
+
+Solución que imprima el costo de un pedido de un artículo del cual se tiene la descripción, 
+la cantidad que se requiere y el precio unitario. Si la cantidad pedida excede de 50 unidades, 
+se hace un descuento de 15%.
+
+1. Inicio
+2. cantidad, d[0, n]
+3. precioUnitario, d[0, n]
+4. precioTotal, d[0, n]
+5. descuento, d[0, n]
+6. porcentaje, d[0, n]
+
+7. porcentaje <-- 15
+
+8. Escribir "Ingrese la cantidad de unidades a comprar:"
+9. Lea cantidad
+10. Escribir "Ingrese el costo por unidad:"
+11. Lea precioUnitario
+
+12. precioTotal <-- cantidad * precioUnitario
+
+13. Si cantidad > 50 entonces
+14. 	descuento <-- (porcentaje * precioTotal)/100
+15. 	precioTotal <-- precioTotal - descuento	
+16. Fin Si
+
+17. Escribir "El costo del pedido es: " + precioTotal
+
+18. Fin
+
+
+---------------------------------------------------------------------------------------
+CASO EXPUESTO EN CLASE
+
+Solución que imprima el costo de un pedido de un artículo del cual se tiene la descripción, 
+la cantidad que se requiere y el precio unitario. Si la cantidad pedida es exactamente 
+10 unidades o 20 unidades, se hace un descuento de 15%; caso contrario se descuenta el 10%
+
+
+1. Inicio
+2. cantidad, d[0, n]
+3. precioUnitario, d[0, n]
+4. precioTotal, d[0, n]
+5. descuento, d[0, n]
+6. porcentaje1, d[0, n]
+7. porcentaje2, d[0, n]
+
+8. porcentaje1 <-- 15
+9. porcentaje2 <-- 10
+
+10. Escribir "Ingrese la cantidad de unidades a comprar:"
+11. Lea cantidad
+12. Escribir "Ingrese el costo por unidad:"
+13. Lea precioUnitario
+
+14. precioTotal <-- cantidad * precioUnitario
+
+15. Si cantidad <-- 10 OR cantidad <-- 20  entonces
+16. 	descuento <-- (porcentaje1 * precioTotal)/100
+17. 	precioTotal <-- precioTotal - descuento	
+18. Por el contrario
+19. 	descuento <-- (porcentaje2 * precioTotal)/100
+20. 	precioTotal <-- precioTotal - descuento
+21. Fin Si
+
+22. Escribir "El costo del pedido es: " + precioTotal
+
+23. Fin
